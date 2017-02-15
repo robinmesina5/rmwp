@@ -20,13 +20,11 @@ const employees = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas',
   styles: [`.form-control { width: 300px; }`]
 })
 
-export class NgbdTypeaheadSearch {
+export class NgbTypeaheadSearch {
   public model = employees;
   
-  search = (text$: Observable<string>) =>
-    text$
+  search = (text$: Observable<string>) => text$
       .debounceTime(200)
       .distinctUntilChanged()
-      .map(term => term.length < 2 ? []
-        : employees.filter(v => new RegExp(term, 'gi').test(v)).splice(0, 10));
+      .map(term => term.length < 2 ? [] : employees.filter(v => new RegExp(term, 'gi').test(v)).splice(0, 10));
 }

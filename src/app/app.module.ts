@@ -4,12 +4,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
-import { NgbdTypeaheadSearch } from './typeahead-search.component';
+import { NgbTypeaheadSearch } from './typeahead-search.component';
+import { NgbTypeaheadConfig } from './typeahead.config';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgbdTypeaheadSearch
+    NgbTypeaheadSearch
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,9 @@ import { NgbdTypeaheadSearch } from './typeahead-search.component';
     ReactiveFormsModule,
     NgbModule
   ],
-  providers: [],
-  bootstrap: [AppComponent, NgbdTypeaheadSearch]
+  providers: [
+    NgbTypeaheadConfig
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
