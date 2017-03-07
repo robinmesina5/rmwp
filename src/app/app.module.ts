@@ -6,18 +6,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { NgbTypeaheadSearch } from './typeahead-search.component';
 import { NgbTypeaheadConfig } from './typeahead.config';
+import { PostListComponent } from './posts/post-list/post-list.component';
+import { RmwpRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NgbTypeaheadSearch
+    NgbTypeaheadSearch,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule.forRoot(),
+    RmwpRoutingModule
   ],
   providers: [
     NgbTypeaheadConfig
