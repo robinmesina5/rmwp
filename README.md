@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Rmwp
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
@@ -32,4 +31,3 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 =======
 # rmwp
->>>>>>> 661c01ee8b7f54a48e61e6719abb45078e29f786
