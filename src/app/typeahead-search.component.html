@@ -1,2 +1,3 @@
 <!-- <input type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/> -->
-<input type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" inputFormatter="formatter"/>
+<input type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatMatches" [resultFormatter]="formatMatches"/>
+<pre>Employee: {{ model | json }}</pre>
