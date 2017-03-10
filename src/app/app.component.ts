@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbTypeaheadSearch } from './typeahead-search.component';
-import { NgbTypeaheadConfig } from './typeahead.config';
+import { NgbTypeaheadSearch } from './typeahead/typeahead-search.component';
+import { NgbTypeaheadConfig } from './typeahead/typeahead.config';
 
 @Component({
   selector: 'app-root',

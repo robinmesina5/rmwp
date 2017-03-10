@@ -62,7 +62,7 @@ const employees = [{'name': 'Adam Makowiecki','email': 'amakowiecki@guidepoint.c
 @Component({
   selector: 'ngbd-typeahead-search',
   templateUrl: './typeahead-search.component.html',
-  styles: [`.form-control { width: 300px; }`]
+  styleUrls: ['./typeahead.scss']
 })
 
 export class NgbTypeaheadSearch {
@@ -81,7 +81,7 @@ export class NgbTypeaheadSearch {
       .debounceTime(200)
       .distinctUntilChanged()
       .map(term => term.length < 2 ? []
-        : employees.filter(v => new RegExp(term, 'gi').test(v.name) || new RegExp(term, 'gi').test(v.email) || new RegExp(term, 'gi').test(v.title) || new RegExp(term, 'gi').test(v.location)));
+        : employees.filter(v => new RegExp(term, 'gi').test(v.name + v.email + v.title + v.location)));
     }
     formatMatches = (value: any) => [value.name, value.email, value.title, value.location, value.phone, value.extension] || '';
 }

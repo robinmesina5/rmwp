@@ -4,8 +4,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
-import { NgbTypeaheadSearch } from './typeahead-search.component';
-import { NgbTypeaheadConfig } from './typeahead.config';
+import { NgbTypeaheadSearch } from './typeahead/typeahead-search.component';
+import { NgbTypeaheadConfig } from './typeahead/typeahead.config';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { RmwpRoutingModule } from './app-routing.module';
 
