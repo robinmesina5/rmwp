@@ -76,11 +76,12 @@ export class NgbTypeaheadSearch {
   //   public phone: string
   // ) {}
   search (text$: Observable<string>) { 
+    console.log(employees);
     return text$
       .debounceTime(200)
       .distinctUntilChanged()
       .map(term => term.length < 2 ? []
-        : employees.filter(v => new RegExp(term, 'gi').test(v.name)));
+        : employees.filter(v => new RegExp(term, 'gi').test(v.name) || new RegExp(term, 'gi').test(v.email) || new RegExp(term, 'gi').test(v.title) || new RegExp(term, 'gi').test(v.location)));
     }
-    formatMatches = (value: any) => value.name || '';
+    formatMatches = (value: any) => [value.name, value.email, value.title, value.location, value.phone, value.extension] || '';
 }
