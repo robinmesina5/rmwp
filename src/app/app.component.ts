@@ -12,5 +12,5 @@ import { NgbTypeaheadConfig } from './typeahead/typeahead.config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works';
+  title = '';
 }

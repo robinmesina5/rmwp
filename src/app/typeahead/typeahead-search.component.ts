@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
@@ -62,7 +62,8 @@ const employees = [{'name': 'Adam Makowiecki','email': 'amakowiecki@guidepoint.c
 @Component({
   selector: 'ngbd-typeahead-search',
   templateUrl: './typeahead-search.component.html',
-  styleUrls: ['./typeahead.scss']
+  styleUrls: ['./typeahead.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class NgbTypeaheadSearch {

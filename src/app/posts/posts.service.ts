@@ -11,14 +11,13 @@ import { Post } from './post';
 export class PostsService {
 
   private postsUrl = "http://www.guidepoint.com/wp-json/wp/v2/";
-  // private postsUrl = "http://intranet.guidepoint.com/wp-json/wp/v2/pages/";
+  // private postsUrl = "http://intranet.guidepoint.com/wp-json/wp/v2/";
   
   constructor(private http: Http) { }
   
   getPosts(): Observable<Post[]> {
     return this.http
       .get(this.postsUrl + 'posts')
-      // .get(this.postsUrl + 'about-us')
       .map((res: Response) => res.json());
   }
 

@@ -2,7 +2,16 @@
     width: 300px;
 }
 
-ngb-highlight.dropdown-active {
-  background-color: transparent;
-  color: #088bce;
+.employee-display {
+    color: #088bce;
+}
+
+ngb-typeahead-window {
+    width: 300px;
+}
+
+button {
+    background-color: transparent;
+    color: #088bce;
+    text-align: left;
 }

@@ -19,6 +19,7 @@ export class PostListComponent implements OnInit {
       .getPosts()
       .subscribe(res => {
         this.posts = res;
+        // console.log(res[0]["content"]["rendered"]);
       });
   }
 
