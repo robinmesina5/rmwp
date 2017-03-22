@@ -10,8 +10,23 @@ ngb-typeahead-window {
     width: 300px;
 }
 
-button {
+.dropdown-item {
     background-color: transparent;
+    border: 1px solid gray;
     color: #088bce;
+    font-family: "Avenir Next W06 Regular", "Open Sans", Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 2px;
+    padding: 6px;
     text-align: left;
+    
+    &.active {
+      background-color: #088bce;
+      color: #fff;
+    }
+}
+
+.employee-display {
+    font-family: "Avenir Next W06 Regular", "Open Sans", Arial, sans-serif;
+    font-size: 12px;
 }

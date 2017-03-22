@@ -9,8 +9,8 @@ import { Post } from './post';
 
 @Injectable()
 export class PostsService {
-
-  private postsUrl = "http://www.guidepoint.com/wp-json/wp/v2/";
+     private postsUrl = "";
+  // private postsUrl = "http://www.guidepoint.com/wp-json/wp/v2/";
   // private postsUrl = "http://intranet.guidepoint.com/wp-json/wp/v2/";
   
   constructor(private http: Http) { }

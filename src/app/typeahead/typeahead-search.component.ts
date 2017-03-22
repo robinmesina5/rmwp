@@ -68,14 +68,7 @@ const employees = [{'name': 'Adam Makowiecki','email': 'amakowiecki@guidepoint.c
 
 export class NgbTypeaheadSearch {
   public model = '';
-  
-  // constructor(
-  //   public name: string,
-  //   public email: string,
-  //   public title: string,
-  //   public location: string,
-  //   public phone: string
-  // ) {}
+
   search (text$: Observable<string>) { 
     console.log(employees);
     return text$
