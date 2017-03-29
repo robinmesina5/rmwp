@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
@@ -68,7 +68,14 @@ const employees = [{'name': 'Adam Makowiecki','email': 'amakowiecki@guidepoint.c
 
 export class NgbTypeaheadSearch {
   public model = '';
-
+  
+  @ViewChild('userInput')
+  userInputVariable: any;
+  
+  reset() {
+    this.userInputVariable.nativeElement.value = "";  
+  }
+  
   search (text$: Observable<string>) { 
     console.log(employees);
     return text$
@@ -77,5 +84,6 @@ export class NgbTypeaheadSearch {
       .map(term => term.length < 2 ? []
         : employees.filter(v => new RegExp(term, 'gi').test(v.name + v.email + v.title + v.location)));
     }
+    clearInput = (value: any) => "";
     formatMatches = (value: any) => [value.name, value.email, value.title, value.location, value.phone, value.extension] || '';
 }

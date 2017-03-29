@@ -1,6 +1,7 @@
 <div class="container">
   <div [hidden]="submitted">
-    <input type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="formatMatches" [resultFormatter]="formatMatches"/>
+    <input type="text" #userInput class="form-control" [(ngModel)]="model" [ngbTypeahead]="search" [inputFormatter]="clearInput" [resultFormatter]="formatMatches" (selectItem)="reset()"/>
+    <button (click)="reset()">Clear</button>
     <br>
     <div class="employee-display">
       <p>
